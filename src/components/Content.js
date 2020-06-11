@@ -1,30 +1,23 @@
 import React from 'react'
 import CoffeCard from './CoffeCard'
 import {Grid} from '@material-ui/core'
+import coffeMakerList from "./constants";
+
 
 function Content() {
-    return (
-        <Grid container spacing={4}>
-            <Grid item xs={12} sm={4} >
-                <CoffeCard />
-            </Grid>
-            <Grid item xs={12} sm={4} >
-                <CoffeCard />
-            </Grid>
-            <Grid item xs={12} sm={4} >
-                <CoffeCard />
-            </Grid>
-            <Grid item xs={12} sm={4} >
-                <CoffeCard />
-            </Grid>
-            <Grid item xs={12} sm={4} >
-                <CoffeCard />
-            </Grid>
-            <Grid item xs={12} sm={4} >
-                <CoffeCard />
-            </Grid>
+    const getCoffeMakerCard = coffeMakerObj => {
+        return (
+          <Grid item xs={12} sm={4}>
+            <CoffeCard {...coffeMakerObj} />
+          </Grid>
+        );
+      };
+    
+      return (
+        <Grid container spacing={2}>
+          {coffeMakerList.map(coffeMakerObj => getCoffeMakerCard(coffeMakerObj))}
         </Grid>
-    )
+      );
 }
 
 export default Content
