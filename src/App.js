@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Grid } from '@material-ui/core'
 import Header from './components/Header';
+import Content from './components/Content'
 
 function App() {
   
@@ -15,7 +16,7 @@ function App() {
         <Grid item container>
           <Grid item xs={0} sm={2} />
             <Grid item xs={12} sm={8}>
-              This is where the content will be
+              <Content />
             </Grid>
           <Grid item xs={0} sm={2} />
         </Grid>
