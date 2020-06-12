@@ -17,6 +17,9 @@ function ButtonComponent() {
     <Button variant="contained" color="primary" href="#contained-buttons" size='large'>
       Link
     </Button>
+    <Button variant="contained" color="secondary">
+      Red color 
+    </Button>
         </div>
     )
 }
